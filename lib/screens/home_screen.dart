@@ -20,15 +20,6 @@ class HomeScreen extends StatelessWidget {
               ).showSnackBar(SnackBar(content: Text('Belum ada notifikasi')));
             },
           ),
-          IconButton(
-            icon: Icon(Icons.stadium),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => ProfileScreen()),
-              );
-            },
-          ),
         ],
       ),
       body: Padding(
@@ -57,6 +48,12 @@ class HomeScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => JobSearchScreen()),
+          );
+        }
+        if (title == "Provil & CV") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => ProfileScreen()),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
