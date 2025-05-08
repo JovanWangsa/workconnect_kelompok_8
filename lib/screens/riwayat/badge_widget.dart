@@ -8,13 +8,12 @@ class BadgeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tooltip(
-      message: 'Badge: $badgeName',
+      message: badgeName,
       child: Chip(
         avatar: Icon(Icons.star, color: Colors.amber),
         label: Text(badgeName),
         backgroundColor: Colors.yellow[100],
-        elevation: 2,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        elevation: 3,
       ),
     );
   }

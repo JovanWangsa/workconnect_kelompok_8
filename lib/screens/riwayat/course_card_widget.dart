@@ -8,20 +8,26 @@ class CourseCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 2,
       margin: EdgeInsets.symmetric(vertical: 8),
-      elevation: 3,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        title: Text(course['title']),
-        subtitle: Column(
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              course['title'],
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            SizedBox(height: 4),
             Text("Kategori: ${course['category']}"),
-            Text("Selesai: ${course['date']}"),
+            SizedBox(height: 4),
+            Text("Selesai: ${course['date'].toString().split(' ')[0]}"),
+            SizedBox(height: 4),
             LinearProgressIndicator(value: course['progress']),
           ],
         ),
-        trailing: Icon(Icons.check_circle, color: Colors.green),
       ),
     );
   }

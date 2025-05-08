@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'job_search_screen.dart';
 import 'profile_screen.dart';
-import 'course_history_screen.dart';
+import '../screens/riwayat/course_history_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -64,9 +64,7 @@ class HomeScreen extends StatelessWidget {
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Navigasi ke $title (belum diimplementasi)'),
-            ),
+            SnackBar(content: Text('Navigasi ke $title (siap diimplementasi)')),
           );
         }
       },
