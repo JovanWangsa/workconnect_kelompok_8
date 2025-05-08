@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/course_screen.dart';
+import '../screens/riwayat/course_screen.dart';
 
 class CourseHistoryScreen extends StatelessWidget {
   final List<Map<String, String>> completedCourses = [
@@ -32,7 +32,7 @@ class CourseHistoryScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CourseHistoryScreen()),
+                MaterialPageRoute(builder: (context) => CourseScreen()),
               );
             },
           ),

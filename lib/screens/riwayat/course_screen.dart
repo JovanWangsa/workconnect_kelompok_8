@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'badge_widget.dart';
 import 'course_card_widget.dart';
 
-class CourseHistoryScreen extends StatelessWidget {
+class CourseScreen extends StatelessWidget {
   final List<Map<String, dynamic>> completedCourses = [
     {
       'title': 'Belajar Flutter Dasar',
