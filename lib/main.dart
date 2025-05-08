@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'WorkConnect 8',
+      title: 'WorkConnect',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         // This is the theme of your application.

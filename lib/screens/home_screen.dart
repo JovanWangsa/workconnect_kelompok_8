@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'job_search_screen.dart';
+import 'profile_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,6 +18,15 @@ class HomeScreen extends StatelessWidget {
               ScaffoldMessenger.of(
                 context,
               ).showSnackBar(SnackBar(content: Text('Belum ada notifikasi')));
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.stadium),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => ProfileScreen()),
+              );
             },
           ),
         ],
