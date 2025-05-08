@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/course_screen.dart';
 
 class CourseHistoryScreen extends StatelessWidget {
   final List<Map<String, String>> completedCourses = [
@@ -22,7 +23,21 @@ class CourseHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Riwayat Kursus & Badge')),
+      appBar: AppBar(
+        title: Text('Riwayat Kursus & Badge'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.book),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CourseHistoryScreen()),
+              );
+            },
+          ),
+        ],
+      ),
       body: ListView.builder(
         itemCount: completedCourses.length,
         itemBuilder: (context, index) {
