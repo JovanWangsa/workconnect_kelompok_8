@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'job_search_screen.dart';
 import 'profile_screen.dart';
+import 'course_history_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -54,6 +55,12 @@ class HomeScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => ProfileScreen()),
+          );
+        }
+        if (title == "Kursus & Sertifikat") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => CourseHistoryScreen()),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
