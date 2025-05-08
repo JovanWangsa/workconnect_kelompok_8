@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
             MaterialPageRoute(builder: (_) => JobSearchScreen()),
           );
         }
-        if (title == "Provil & CV") {
+        if (title == "Profil & CV") {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => ProfileScreen()),
