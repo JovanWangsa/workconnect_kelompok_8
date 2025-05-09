@@ -3,6 +3,7 @@ import 'job_search_screen.dart';
 import 'profile_screen.dart';
 import '../screens/riwayat/course_history_screen.dart';
 import '../screens/work_report_screen.dart';
+import 'bookmark_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,9 +70,15 @@ class HomeScreen extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (context) => WorkReportScreen()),
           );
+        }
+        if (title == "Bookmark") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BookmarkScreen()),
+          );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Navigasi ke $title (siap diimplementasi)')),
+            SnackBar(content: Text('Navigasi ke $title (Siap Diimplementasi)')),
           );
         }
       },
