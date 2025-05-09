@@ -52,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SnackBar(content: Text("Simulasi: Upload foto profil")),
                 );
               },
-              child: Text('Ubah Foto'),
+              child: const Text('Ubah Foto'),
             ),
             buildTextField("Nama Lengkap", _nameController),
             buildTextField("Username", _usernameController),
@@ -70,7 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   context,
                 ).showSnackBar(SnackBar(content: Text("Simulasi: Upload CV")));
               },
-              child: Text('Upload CV'),
+              child: const Text('Upload CV'),
             ),
             SizedBox(height: 16),
             ElevatedButton(
@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 );
               },
-              child: Text("Simpan Perubahan"),
+              child: const Text("Simpan Perubahan"),
             ),
           ],
         ),
@@ -105,5 +105,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
     );
+    }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _usernameController.dispose();
+    _ageController.dispose();
+    _genderController.dispose();
+    _addressController.dispose();
+    _cvController.dispose();
+    super.dispose();
   }
 }
+
