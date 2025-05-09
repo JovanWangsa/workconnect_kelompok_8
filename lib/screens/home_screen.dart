@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'job_search_screen.dart';
 import 'profile_screen.dart';
 import '../screens/riwayat/course_history_screen.dart';
+import '../screens/work_report_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
