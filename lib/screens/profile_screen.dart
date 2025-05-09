@@ -8,22 +8,22 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final TextEditingController _nameController = TextEditingController(
-    text: 'John Doe',
+    text: 'Jovan Wangsa',
   );
   final TextEditingController _usernameController = TextEditingController(
-    text: 'johndoe99',
+    text: 'jovan_wangsa',
   );
   final TextEditingController _ageController = TextEditingController(
-    text: '22',
+    text: '20',
   );
   final TextEditingController _genderController = TextEditingController(
     text: 'Laki-laki',
   );
   final TextEditingController _addressController = TextEditingController(
-    text: 'Jakarta, Indonesia',
+    text: 'Medan, Indonesia',
   );
   final TextEditingController _cvController = TextEditingController(
-    text: 'CV_john_doe.pdf',
+    text: 'CV_jovan_wangsa.pdf',
   );
 
   File? _profilePhoto; // Simulasi file foto (tidak digunakan nyata)
@@ -105,7 +105,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
     );
-    }
+  }
 
   @override
   void dispose() {
@@ -118,4 +118,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     super.dispose();
   }
 }
-
