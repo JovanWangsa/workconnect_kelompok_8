@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'job_search_screen.dart';
+import 'profile_screen.dart';
+import '../screens/riwayat/course_history_screen.dart';
+import '../screens/work_report_screen.dart';
+import 'bookmark_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -48,11 +52,33 @@ class HomeScreen extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (_) => JobSearchScreen()),
           );
+        }
+        if (title == "Profil & CV") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => ProfileScreen()),
+          );
+        }
+        if (title == "Kursus & Sertifikat") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => CourseHistoryScreen()),
+          );
+        }
+        if (title == "Laporan Kerja") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => WorkReportScreen()),
+          );
+        }
+        if (title == "Bookmark") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BookmarkScreen()),
+          );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Navigasi ke $title (belum diimplementasi)'),
-            ),
+            SnackBar(content: Text('Navigasi ke $title (Siap Diimplementasi)')),
           );
         }
       },
